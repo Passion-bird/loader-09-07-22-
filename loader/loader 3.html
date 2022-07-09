@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loader 3</title>
+    <style>
+        body {
+            background-color: rgb(201, 224, 247);
+        }
+        .middle {
+            margin-left: 650px;
+            margin-top: 300px;
+        }
+
+        .bar {
+            width: 3px;
+            height: 30px;
+            background: rgb(226, 18, 174);
+            display: inline-block;
+            transform-origin: bottom center;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            animation: loader 1.2s linear infinite;
+        }
+
+        .bar1 {
+            animation-delay: 0.1s;
+        }
+
+        .bar2 {
+            animation-delay: 0.2s;
+        }
+
+        .bar3 {
+            animation-delay: 0.3s;
+        }
+
+        .bar4 {
+            animation-delay: 0.4s;
+        }
+
+        .bar5 {
+            animation-delay: 0.5s;
+        }
+
+        .bar6 {
+            animation-delay: 0.6s;
+        }
+
+        .bar7 {
+            animation-delay: 0.7s;
+        }
+
+        .bar8 {
+            animation-delay: 0.8s;
+        }
+
+        @keyframes loader {
+            0% {
+                transform: scaleY(0.1);
+                /* background: ; */
+            }
+
+            50% {
+                transform: scaleY(1);
+                background: rgba(92, 81, 190, 0.623);
+            }
+
+            100% {
+                transform: scaleY(0.1);
+                background: transparent;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="middle">
+        <div class="bar bar1"></div>
+        <div class="bar bar2"></div>
+        <div class="bar bar3"></div>
+        <div class="bar bar4"></div>
+        <div class="bar bar5"></div>
+        <div class="bar bar6"></div>
+        <div class="bar bar7"></div>
+        <div class="bar bar8"></div>
+    </div>
+</body>
+
+</html>

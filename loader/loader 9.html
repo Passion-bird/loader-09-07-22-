@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+body {
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    animation: rotate 4s ease-out infinite;
+    filter: url("#gooey");
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.container .liquid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(45deg, #8e77f5, #ca09ca);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    --ani_dur: 4s;
+}
+
+.container .liquid:nth-child(1) {
+    top: 0;
+    animation: animate1 var(--ani_dur) linear infinite;
+}
+
+.container .liquid:nth-child(2) {
+    left: 0;
+    animation: animate2 var(--ani_dur) linear infinite;
+}
+
+.container .liquid:nth-child(3) {
+    left: 100%;
+    animation: animate3 var(--ani_dur) linear infinite;
+}
+
+.container .liquid:nth-child(4) {
+    top: 100%;
+    animation: animate4 var(--ani_dur) linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        top: 0;
+    }
+
+    50% {
+        top: 100%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        left: 100%;
+    }
+
+    50% {
+        left: 0;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes animate4 {
+    0% {
+        top: 100%;
+    }
+
+    50% {
+        top: 0;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+svg {
+    width: 0;
+    height: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+    </style>
+</head>
+<body>
+    
+  <div class="container">
+	<div class="loader">
+		<div class="note-0"></div>
+		<div class="note-1"></div>
+		<div class="note-2"></div>
+		<div class="note-3"></div>
+		<div class="note-4"></div>
+	</div>
+	<div class="status">Loading...</div>
+</div>
+
+<div class="container">
+    <div class="liquid"></div>
+    <div class="liquid"></div>
+    <div class="liquid"></div>
+    <div class="liquid"></div>
+  </div>
+  <svg>
+    <filter id="gooey">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
+      <feColorMatrix values="
+          1 0 0 0 0
+          0 1 0 0 0
+          0 0 1 0 0
+          0 0 0 20 -10
+          " />
+    </filter>
+  </svg>
+
+  <div class="container">
+    <div class="svg-file z-logo">
+        <svg width="133" height="119" viewBox="-1 -5 150 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M37.5 7.5L26.25 41.25L71.6667 37.5L0 118.75L100.417 112.083L113.75 75L82.5 76.6667L132.083 0L37.5 7.5Z"
+                fill="#47AF9A" />
+        </svg>
+        <span></span>
+    </div>
+</div>
+
+</body>
+</html>
